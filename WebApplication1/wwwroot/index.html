@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Marketing Assistant</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark border-bottom">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-robot"></i>
+                AI Marketing Assistant
+            </a>
+
+            <span class="badge bg-success">
+                AI Powered
+            </span>
+
+        </div>
+    </nav>
+
+
+    <!-- Main -->
+    <main class="container py-5">
+
+        <!-- Header -->
+        <div class="text-center mb-5">
+
+            <h1 class="display-5 fw-bold">
+                AI Marketing Assistant
+            </h1>
+
+            <p class="text-secondary">
+                Generate complete e-commerce marketing campaigns
+                using your product data.
+            </p>
+
+        </div>
+
+
+        <!-- Campaign Setup -->
+        <div class="card dashboard-card mb-4">
+
+            <div class="card-body p-4">
+
+                <h4 class="mb-4">
+                    <i class="bi bi-gear"></i>
+                    Campaign Setup
+                </h4>
+
+
+                <!-- CSV Upload -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-bold">
+                        Product CSV
+                    </label>
+
+                    <div id="dropZone"
+                         class="drop-zone">
+
+                        <i class="bi bi-cloud-arrow-up upload-icon"></i>
+
+                        <h5>
+                            Drag & Drop your CSV
+                        </h5>
+
+                        <p class="text-secondary">
+                            or click to browse
+                        </p>
+
+                        <input type="file"
+                               id="csvFile"
+                               accept=".csv"
+                               hidden>
+
+                        <button type="button"
+                                class="btn btn-outline-light"
+                                onclick="document.getElementById('csvFile').click()">
+
+                            Choose CSV
+
+                        </button>
+
+                    </div>
+
+                    <div id="fileInfo"
+                         class="mt-3">
+                    </div>
+
+                </div>
+
+
+                <!-- Campaign Goal -->
+                <div class="mb-4">
+
+                    <label for="campaignGoal"
+                           class="form-label fw-bold">
+
+                        Campaign Goal
+
+                    </label>
+
+                    <textarea id="campaignGoal"
+                              class="form-control"
+                              rows="3"
+                              placeholder="Write your campaign goal in Arabic or English..."></textarea>
+
+                    <small class="text-secondary">
+                        You can write your goal in Arabic or English.
+                    </small>
+
+                </div>
+
+
+                <!-- Output Language -->
+                <div class="mb-4">
+
+                    <label class="form-label fw-bold">
+                        Output Language
+                    </label>
+
+                    <div class="language-options">
+
+                        <label class="language-option">
+                            <input type="radio"
+                                   name="outputLanguage"
+                                   value="English"
+                                   checked>
+
+                            <span class="language-card">
+                                <span class="language-flag">🇬🇧</span>
+
+                                <span>
+                                    <strong>English</strong>
+                                    <small>Generate campaign in English</small>
+                                </span>
+                            </span>
+                        </label>
+
+
+                        <label class="language-option">
+                            <input type="radio"
+                                   name="outputLanguage"
+                                   value="Arabic">
+
+                            <span class="language-card">
+                                <span class="language-flag">🇪🇬</span>
+
+                                <span>
+                                    <strong>العربية</strong>
+                                    <small>إنشاء الحملة باللغة العربية</small>
+                                </span>
+                            </span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Budget + Duration -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label for="targetBudget"
+                               class="form-label fw-bold">
+
+                            Target Budget
+
+                        </label>
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">
+                                $
+                            </span>
+
+                            <input type="number"
+                                   id="targetBudget"
+                                   class="form-control"
+                                   placeholder="10000"
+                                   min="1">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label for="durationWeeks"
+                               class="form-label fw-bold">
+
+                            Duration
+
+                        </label>
+
+                        <div class="input-group">
+
+                            <input type="number"
+                                   id="durationWeeks"
+                                   class="form-control"
+                                   value="4"
+                                   min="1"
+                                   max="52">
+
+                            <span class="input-group-text">
+                                Weeks
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Generate Button -->
+                <div class="d-grid mt-3">
+
+                    <button id="generateBtn"
+                            class="btn btn-primary btn-lg">
+
+                        <i class="bi bi-stars"></i>
+                        Generate Campaign
+
+                    </button>
+
+                </div>
+
+
+                <!-- Loading -->
+                <div id="loading"
+                     class="text-center mt-4 d-none">
+
+                    <div class="spinner-border"
+                         role="status">
+                    </div>
+
+                    <p class="mt-2 text-secondary">
+                        AI is generating your campaign...
+                    </p>
+
+                </div>
+
+
+                <!-- Error -->
+                <div id="errorMessage"
+                     class="alert alert-danger mt-4 d-none">
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Results -->
+        <section id="resultsSection"
+                 class="d-none">
+
+            <div class="card dashboard-card">
+
+                <div class="card-body p-4">
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+
+                        <h4>
+                            <i class="bi bi-bar-chart-line"></i>
+                            Campaign Results
+                        </h4>
+
+                        <div>
+
+                            <button id="exportCsvBtn"
+                                    class="btn btn-outline-light me-2">
+
+                                <i class="bi bi-filetype-csv"></i>
+                                Export CSV
+
+                            </button>
+
+                            <button id="exportPdfBtn"
+                                    class="btn btn-outline-light">
+
+                                <i class="bi bi-filetype-pdf"></i>
+                                Export PDF
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs mb-4">
+
+                        <li class="nav-item">
+
+                            <button class="nav-link active"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#calendarTab">
+
+                                <i class="bi bi-calendar3"></i>
+                                Campaign Calendar
+
+                            </button>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <button class="nav-link"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#personasTab">
+
+                                <i class="bi bi-people"></i>
+                                Personas & Copy
+
+                            </button>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <button class="nav-link"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#jsonTab">
+
+                                <i class="bi bi-code-slash"></i>
+                                Developer Payload
+
+                            </button>
+
+                        </li>
+
+                    </ul>
+
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+
+
+                        <!-- Calendar -->
+                        <div class="tab-pane fade show active"
+                             id="calendarTab">
+
+                            <div id="campaignSummary"
+                                 class="alert alert-info">
+                            </div>
+
+                            <div class="table-responsive">
+
+                                <table class="table table-dark table-hover align-middle">
+
+                                    <thead>
+
+                                        <tr>
+                                            <th>Week</th>
+                                            <th>Channel</th>
+                                            <th>Objective</th>
+                                            <th>Audience</th>
+                                            <th>Content</th>
+                                            <th>Copy</th>
+                                            <th>Budget</th>
+                                            <th>KPI</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody id="campaignTableBody">
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Personas -->
+                        <div class="tab-pane fade"
+                             id="personasTab">
+
+                            <div id="personasContainer"
+                                 class="row g-4">
+                            </div>
+
+                        </div>
+
+
+                        <!-- JSON -->
+                        <div class="tab-pane fade"
+                             id="jsonTab">
+
+                            <div class="d-flex justify-content-end mb-3">
+
+                                <button id="copyJsonBtn"
+                                        class="btn btn-outline-light">
+
+                                    <i class="bi bi-clipboard"></i>
+                                    Copy Code
+
+                                </button>
+
+                            </div>
+
+                            <pre id="jsonViewer"
+                                 class="json-viewer">
+                            </pre>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+
+    <!-- Our JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>

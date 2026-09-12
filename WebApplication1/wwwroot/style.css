@@ -1,0 +1,357 @@
+﻿/* =========================
+   GLOBAL
+========================= */
+
+body {
+    background: #111827;
+    color: #f3f4f6;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: #172033;
+    border-bottom: 1px solid #2d3a50 !important;
+}
+
+.navbar-brand {
+    color: #f8fafc !important;
+}
+
+    .navbar-brand i {
+        color: #60a5fa;
+    }
+
+
+/* =========================
+   MAIN CARDS
+========================= */
+
+.dashboard-card {
+    background: #1b2638;
+    border: 1px solid #2d3a50;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   DROP ZONE
+========================= */
+
+.drop-zone {
+    border: 2px dashed #475569;
+    border-radius: 16px;
+    padding: 45px 20px;
+    text-align: center;
+    cursor: pointer;
+    background: #172033;
+    transition: all 0.25s ease;
+}
+
+    .drop-zone:hover {
+        border-color: #60a5fa;
+        background: #1d2a40;
+        transform: translateY(-2px);
+    }
+
+.upload-icon {
+    font-size: 48px;
+    color: #60a5fa;
+    display: block;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-label {
+    color: #e5e7eb;
+}
+
+.form-control,
+.form-control:focus,
+.input-group-text {
+    background: #111827;
+    color: #f8fafc;
+    border-color: #3b4a63;
+}
+
+    .form-control:focus {
+        border-color: #60a5fa;
+        box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.12);
+    }
+
+    .form-control::placeholder {
+        color: #7f8da3;
+    }
+
+.input-group-text {
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+    .btn-primary:hover {
+        background: #2563eb;
+        border-color: #2563eb;
+        transform: translateY(-1px);
+    }
+
+.btn-outline-light {
+    border-color: #475569;
+    color: #dbeafe;
+    border-radius: 9px;
+}
+
+    .btn-outline-light:hover {
+        background: #26364f;
+        border-color: #60a5fa;
+        color: #ffffff;
+    }
+
+
+/* =========================
+   TABS
+========================= */
+
+.nav-tabs {
+    border-bottom-color: #344258;
+}
+
+    .nav-tabs .nav-link {
+        color: #94a3b8;
+        border: none;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s ease;
+    }
+
+        .nav-tabs .nav-link:hover {
+            color: #dbeafe;
+            border-bottom-color: #60a5fa;
+        }
+
+        .nav-tabs .nav-link.active {
+            background: transparent;
+            color: #ffffff;
+            border: none;
+            border-bottom: 2px solid #60a5fa;
+        }
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table {
+    margin-bottom: 0;
+    color: #e5e7eb;
+}
+
+    .table thead th {
+        background: #172033;
+        color: #bfdbfe;
+        border-bottom: 1px solid #3b4a63;
+    }
+
+    .table tbody td {
+        border-color: #2d3a50;
+    }
+
+.table-hover tbody tr:hover {
+    background: #223049;
+}
+
+
+/* =========================
+   JSON VIEWER
+========================= */
+
+.json-viewer {
+    background: #0d1422;
+    color: #dbeafe;
+    padding: 22px;
+    border: 1px solid #2d3a50;
+    border-radius: 14px;
+    max-height: 600px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+
+/* =========================
+   PERSONA CARDS
+========================= */
+
+.persona-card {
+    background: #172033;
+    border: 1px solid #344258;
+    border-radius: 16px;
+    padding: 22px;
+    height: 100%;
+    transition: 0.2s ease;
+}
+
+    .persona-card:hover {
+        border-color: #60a5fa;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .persona-card h5 {
+        color: #ffffff;
+    }
+
+        .persona-card h5 i {
+            color: #60a5fa;
+        }
+
+    .persona-card h6 {
+        color: #bfdbfe;
+    }
+
+    .persona-card li {
+        margin-bottom: 8px;
+        color: #cbd5e1;
+    }
+
+
+/* =========================
+   FILE INFO
+========================= */
+
+#fileInfo {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+
+/* =========================
+   ALERT
+========================= */
+
+.alert-info {
+    background: #172d46;
+    border-color: #315b83;
+    color: #bfdbfe;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badge.bg-success {
+    background: #16a34a !important;
+}
+
+.badge.bg-primary {
+    background: #2563eb !important;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.spinner-border {
+    color: #60a5fa;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b4a63;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #526582;
+    }
+/* =========================
+   LANGUAGE OPTIONS
+========================= */
+
+.language-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.language-option {
+    cursor: pointer;
+    margin: 0;
+}
+
+    .language-option input {
+        display: none;
+    }
+
+.language-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 18px;
+    background: #172033;
+    border: 1px solid #344258;
+    border-radius: 14px;
+    transition: all 0.2s ease;
+}
+
+    .language-card:hover {
+        border-color: #60a5fa;
+        background: #1d2a40;
+    }
+
+.language-option input:checked + .language-card {
+    border-color: #60a5fa;
+    background: #1d2f4a;
+    box-shadow: 0 0 0 1px #60a5fa;
+}
+
+.language-flag {
+    font-size: 28px;
+}
+
+.language-card strong {
+    display: block;
+    color: #f8fafc;
+    font-size: 15px;
+}
+
+.language-card small {
+    display: block;
+    color: #94a3b8;
+    margin-top: 3px;
+}
