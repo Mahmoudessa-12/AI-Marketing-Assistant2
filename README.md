@@ -4,11 +4,25 @@ An AI-powered marketing assistant built with ASP.NET Core and Hugging Face.
 
 ## Features
 
+- Multi-language input and AI-generated output
+- Users can choose their preferred language
+- Flexible campaign settings including budget, campaign goal, and campaign duration
 - Analyze marketing data from CSV files
 - Generate AI-powered marketing insights
 - Create marketing campaign ideas
 - Generate marketing content
 - Simple and user-friendly web interface
+
+## Screenshots
+
+### CSV Input
+Screenshot showing the CSV data input.
+
+### Campaign Settings
+Screenshot showing budget, campaign goal, and campaign duration settings.
+
+### AI Output
+Screenshot showing the generated AI marketing results.
 
 ## Technologies
 
