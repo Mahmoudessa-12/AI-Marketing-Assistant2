@@ -25,7 +25,7 @@ An AI-powered marketing assistant built with ASP.NET Core and Hugging Face.
 
 ### AI Output
 
-Screenshot showing the generated AI marketing results.
+![AI Output](Screenshot%202026-09-13%20183406.png)
 
 ## Technologies
 
