@@ -21,7 +21,7 @@ An AI-powered marketing assistant built with ASP.NET Core and Hugging Face.
 
 ### Campaign Settings
 
-Screenshot showing budget, campaign goal, and campaign duration settings.
+![Campaign Settings](Screenshot%202026-09-13%20182941.png)
 
 ### AI Output
 
