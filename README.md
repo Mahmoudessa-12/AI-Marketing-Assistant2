@@ -16,15 +16,12 @@ An AI-powered marketing assistant built with ASP.NET Core and Hugging Face.
 ## Screenshots
 
 ### CSV Input
-
 ![CSV Input](Screenshot%202026-09-13%20182927.png)
 
 ### Campaign Settings
-
 ![Campaign Settings](Screenshot%202026-09-13%20182941.png)
 
 ### AI Output
-
 ![AI Output](Screenshot%202026-09-13%20183406.png)
 
 ## Technologies
