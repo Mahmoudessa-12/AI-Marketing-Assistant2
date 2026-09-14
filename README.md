@@ -55,9 +55,19 @@ The application allows users to upload CSV marketing data, choose campaign setti
 ## Setup
 
 1. Clone the repository.
-2. Open the project in Visual Studio.
-3. Add your Hugging Face API Key in `appsettings.json`.
-4. Run the project using Visual Studio.
+
+2. Open the project in Visual Studio 2022 or later.
+
+3. Open `appsettings.json`.
+
+4. Add your Hugging Face API Key:
+
+```json
+{
+  "HuggingFace": {
+    "ApiKey": "YOUR_API_KEY"
+  }
+}
 
 ## API Configuration
 
