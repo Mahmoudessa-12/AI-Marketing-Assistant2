@@ -24,6 +24,27 @@ An AI-powered marketing assistant built with ASP.NET Core and Hugging Face.
 ### AI Output
 ![AI Output](Screenshot%202026-09-13%20183406.png)
 
+## Project Overview
+
+AI Marketing Assistant is a web-based application that helps businesses and marketers create marketing campaigns using artificial intelligence.
+
+The application allows users to upload CSV marketing data, choose campaign settings such as budget, goal, duration, and preferred language, then generate AI-powered marketing insights, campaign ideas, and content.
+
+## How It Works
+
+1. Upload marketing data using a CSV file.
+2. Choose the campaign budget, goal, and duration.
+3. Select the preferred language.
+4. The system analyzes the provided data.
+5. AI generates marketing insights and campaign recommendations.
+6. The user receives the generated marketing results.
+
+## Requirements
+
+- .NET 8 SDK
+- Visual Studio 2022 or later
+- Hugging Face API Key
+
 ## Technologies
 
 - C#
