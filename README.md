@@ -52,6 +52,14 @@ The application allows users to upload CSV marketing data, choose campaign setti
 - Hugging Face API
 - HTML / CSS / JavaScript
 
+## Project Status
+
+MVP / Source Code version.
+
+The project is provided as-is in its current state and can be customized or further developed by the buyer according to their requirements.
+
+The buyer can add additional features such as authentication, database integration, deployment, custom domain, analytics, or other integrations if needed.
+
 ## Setup
 
 1. Clone the repository.
